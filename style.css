@@ -1,0 +1,605 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #3C434A;
+    /* font-family: 'Montserrat', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif; */
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+body{
+    background-color: #F2F5FF;
+    padding-bottom: 10vh;
+}
+
+.page-container{
+    position: relative;
+    height: 100vh;
+}
+
+/* Header and Footer */
+
+
+nav{
+    background-color: #fff;
+    height: 9vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav img{
+    width: 3rem;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav ul li{
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    height: 9vh;
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+/* Components */
+.container{
+    width: 86%;
+    margin: 7vh auto;
+}
+
+button{
+    border: none;
+}
+
+.btn{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 400;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 5px;
+    background: #1d3557;
+    /* 2271B1 */
+    color: #fff;
+    padding: 10px 20px;
+    margin: 20px 0;
+
+}
+
+.btn-block{
+    width: 100%;
+    text-align: center;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+input, textarea{
+    padding: 2px 4px;
+    height: 40px;
+    border: 1px solid rgb(112, 112, 112);
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+textarea{
+    resize: vertical;
+    padding: 10px;
+    height: 6rem;
+}
+
+input[type=text], input[type=password], input[type=number]{
+    padding: 10px 10px;
+    font-size: 20px;
+}
+
+.alert{
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 20px 20px;
+    border: 2px solid ;
+    border-radius: 4px;
+
+}
+
+.alert.error{
+    background-color: #ff758f;
+    border-color: #c9184a;
+}
+
+
+
+
+/* Login Page */
+.logo{
+    width: 7rem;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    padding-bottom: 50px;
+}
+
+.login-main{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.form{
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid rgba(31, 31, 31, 0.278);
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label{
+    font-size: 1.2rem;
+    padding: 6px 0;
+}
+
+.form-validation{
+    margin-top: 10px;
+    color: #c9184a;
+}
+
+
+
+.lostpassword{
+    display: block;
+    margin: 10px 0;
+}
+
+/* Main Dashboard Page */
+
+.dashboard-container{
+    margin: 20px auto;
+    width: 90%;
+}
+
+/* #add-food{
+    padding: 10px ;
+} */
+
+
+
+
+/* MENU PREVIEW */
+
+
+.banner-area{
+    background-color: #fff;
+    padding: 30px 20px;
+}
+
+.banner-area .restaurant-name{
+    text-align: center;
+}
+
+.menu-area{
+    padding: 20px 30px;
+}
+
+.name-price{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.menu-preview{
+    background-color: #f9f9f9;
+    width: 100%;
+    margin: 10px auto;
+}
+
+.menu-food-title, .menu-food-price{
+    color: #808080;
+}
+
+.menu-food-price{
+    font-weight: 900;
+}
+
+.menu-food-desc{
+    color: #808080e8;
+    padding: 5px 0;
+}
+
+/* MENU EDIT */
+
+.menu-edit{
+    padding: 0 10px;
+}
+
+
+.menu-edit .name-price{
+    display: flex;
+    flex-direction: 1;
+    justify-content: space-between;
+
+}
+
+.menu-food-desc, .menu-food-title, .menu-food-price, .name-price{
+    padding: 0;
+}
+
+.menu-food-title,.menu-food-desc {
+    width: 90%;
+}
+
+.edit.menu-food-title, .edit.menu-food-desc {
+    width: 70%;
+}
+
+.menu-food-item{
+    padding: 6px 0;
+}
+
+/* ICONS */
+.actions{
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+    
+}
+
+.action-icon{
+    font-size: 1.6rem;
+    background-color: #F2F5FF;
+    cursor: pointer;
+}
+
+.fa-pen{
+    color: #467218;
+    padding-right: 4px;
+}
+
+.fa-times-circle{
+    color: #c9184a;
+    padding-left: 4px;
+}
+
+/* GO BACK ICON */
+.go-back{
+    border: thin solid;
+    padding: 20px 25px;
+    border-radius: 50% 50%;
+    margin: 20px 80px;
+}
+
+/* QR  */
+
+.qr-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.qr-group p{
+    text-align: center;
+    padding: 0 10px;
+}
+
+
+/* Add Food Form */
+.add-food-form{
+    margin: 20px auto;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label{
+    font-size: 1.3rem;
+    margin: 4px 0;
+}
+
+.add-food-container{
+    width: 90%;
+    margin: auto;
+}
+
+/* PROFILE PAGE */
+
+.profile-container{
+    background-color: #fff;
+    width: 92%;
+    margin: 2px auto;
+    border-radius: 5px;
+}
+.profile-container .input-group{
+    width: 80%;
+    margin: 6px 0 6px 10px;
+    
+}
+
+/* UPDATE DETAILS PAGE */
+
+form.update-details{
+    width: 80%;
+    margin: 2px auto;
+}
+
+.cpassword-container{
+    margin: 40px auto;
+}
+
+.cpassword-container .input-group{
+    margin-top: 30px;
+}
+
+
+
+
+
+/* Media Queries */
+
+/* Normal Laptops */
+
+@media (min-width: 769px){
+
+    /* Login Page */
+    .login-main.container{
+        width: 20%;
+        
+    }
+
+    /* .form{
+        width: 80%;
+        margin: 0 auto;
+    } */
+
+    .login-main{
+        width: 30%;
+    }
+
+    .logo{
+        padding-bottom: 20px;
+    }
+
+    .lostpassword{
+        transition: color 180ms ease-in-out;
+
+    }
+
+    .lostpassword:hover{
+        color: #14213d;
+
+    }
+
+    .btn{
+        transition: background-color 180ms ease-in-out;
+    }
+
+    .btn:hover{
+        background: #14213d;
+    }
+
+    .form-group {
+        font-size: 1.2rem;
+        padding: 10px 0;
+    }
+
+    /* Dashboard Page */
+    .dashboard-container, .add-food-container{
+        margin: 20px auto;
+        width: 80%;
+        /* display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; */
+    }
+
+    /* #add-food{
+        width: 50%;
+        
+    } */
+
+    /* CREATE PAGE */
+
+    .add-food-container{
+        width: 32%;
+    }
+
+    /* MAIN PAGE */
+
+    /* EDIT MENU */
+
+    .menu-edit{
+        width: 90%;
+        margin:0 auto; 
+        padding: 0 10px;
+    }
+    
+    /* PREVIEW MENU */
+
+    .banner-area{
+        background-color: #fff;
+        padding: 30px 20px;
+        
+    }
+    
+    .banner-area .restaurant-name{
+        text-align: center;
+    }
+    
+    .menu-area{
+        padding: 20px 30px;
+    }
+    
+    .name-price{
+        display: flex;
+        justify-content: space-between;
+    
+    }
+    
+    .menu-preview{
+        background-color: #f9f9f9;
+        width: 400px;
+        margin: 10px auto;
+    }
+    
+    .menu-food-title, .menu-food-price{
+        color: #808080;
+    }
+    
+    .menu-food-price{
+        font-weight: 900;
+    }
+    
+    .menu-food-desc{
+        color: #808080e8;
+    }
+
+    /* PROFILE PAGE */
+
+    .profile-container{
+        width: 50%;
+        margin: 2px auto;
+        border-radius: 5px;
+    }
+    .profile-container .input-group{
+        width: 90%;
+        margin: 6px auto;
+        
+    }
+
+    #change-pwd{
+        margin: 10px 50px;
+
+    }
+
+    .cpassword-container{
+        width: 40%;
+        margin: 80px auto;
+    }
+
+    .cpassword-container .input-group{
+        margin-top: 30px;
+    }
+
+
+
+
+
+}
+
+/* Ipads || Tablets */
+
+@media (min-width: 481px) and (max-width: 768px){
+    .container{
+        width: 30%;
+    }
+
+    .login-main{
+        width: 60%;
+    }
+
+    .logo{
+        padding-bottom: 40px;
+    }
+
+    .lostpassword{
+        transition: color 180ms ease-in-out;
+
+    }
+
+    .lostpassword:hover{
+        color: #14213d;
+
+    }
+
+    .btn{
+        transition: background-color 180ms ease-in-out;
+    }
+
+    .btn:hover{
+        background: #14213d;
+    }
+
+    .form-group {
+        font-size: 1.2rem;
+        padding: 10px 0;
+    }
+}
+
+/* Large Laptops */
+
+@media (min-width: 1024px){
+    .container{
+        width: 70%;
+    }
+
+    .login-main{
+        width: 40%;
+    }
+
+    .logo{
+        padding-bottom: 20px;
+    }
+
+    .lostpassword{
+        transition: color 180ms ease-in-out;
+
+    }
+
+    .lostpassword:hover{
+        color: #14213d;
+
+    }
+
+    .btn{
+        transition: background-color 180ms ease-in-out;
+    }
+
+    .btn:hover{
+        background: #14213d;
+    }
+
+    .form-group {
+        font-size: 1.2rem;
+        padding: 10px 0;
+    }
+
+    input, label{
+        font-size: 1.8rem;
+    }
+}
+
+
+
+
+
+
+
+
