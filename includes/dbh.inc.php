@@ -1,7 +1,7 @@
 <?php
 
-$serverName = "172.105.62.32";
-$dBUserName = "r0hitsgul4m";
+$serverName = "localhost";
+$dBUserName = "rohit";
 $dBPassword = "wA</0083uzlk1669";
 $dBName = "qrmenu";
 $portNumber = 3306;
