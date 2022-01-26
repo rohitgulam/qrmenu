@@ -1,16 +1,16 @@
 <?php
 
-// $serverName = "172.105.62.32";
-// $dBUserName = "r0hitsgul4m";
-// $dBPassword = "wA</0083uzlk1669";
-// $dBName = "qrmenu";
-// $portNumber = 3306;
-
 $serverName = "localhost";
-$dBUserName = "root";
-$dBPassword = "";
+$dBUserName = "rohit";
+$dBPassword = "wA</0083uzlk1669";
 $dBName = "qrmenu";
 $portNumber = 3306;
+
+// $serverName = "localhost";
+// $dBUserName = "root";
+// $dBPassword = "";
+// $dBName = "qrmenu";
+// $portNumber = 3306;
 
 
 $conn = mysqli_connect($serverName, $dBUserName, $dBPassword, $dBName);
