@@ -52,7 +52,7 @@
                 <a href=<?php echo 'public/main.php?rest_id='.$_SESSION["userid"] ?> ><img src='<?php echo generateQR( 'main.php?rest_id='.$_SESSION["userid"]) ?>' alt='QR Code' width='200' height='200'></a>
             </div>
     <?php else : ?>  
-        <?php header("location: login.php");
+            <?php header("location: login.php");
             exit(); ?>
     <?php endif ;?>
 <?php 
