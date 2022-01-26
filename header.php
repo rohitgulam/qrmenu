@@ -1,5 +1,9 @@
 <?php
     session_start();
+    if(!isset($_SESSION["useruid"])){
+        header("location: login.php");
+        exit();
+    }
     require_once "includes/dbh.inc.php";
     require_once "includes/functions.inc.php";
     $foods = fetchItems($pdo, $_SESSION['userid']);

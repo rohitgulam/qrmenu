@@ -44,7 +44,7 @@
 <body>
 
 <nav class="navbar">
-        <a href="index.php" class="header-logo">
-            <img src="../assets/qr-code-1.svg" alt="QR Menu Logo">
-        </a>
-    </nav>
+    <a href="index.php" class="header-logo">
+        <img src="../assets/qr-code-1.svg" alt="QR Menu Logo">
+    </a>
+</nav>

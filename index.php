@@ -1,7 +1,6 @@
 <?php
     include "header.php";
 ?>
-    <?php if(isset($_SESSION["useruid"])) : ?>
         <div class="dashboard-container">
                 <a href="create.php" class="btn btn-block" id="add-food" >Add Food</a>
             </div>
@@ -51,10 +50,6 @@
                 <h4>Click or scan to preview your menu</h4>
                 <a href=<?php echo 'public/main.php?rest_id='.$_SESSION["userid"] ?> ><img src='<?php echo generateQR( 'main.php?rest_id='.$_SESSION["userid"]) ?>' alt='QR Code' width='200' height='200'></a>
             </div>
-    <?php else : ?>  
-            <?php header("location: login.php");
-            exit(); ?>
-    <?php endif ;?>
 <?php 
     include "footer.php"
 ?>

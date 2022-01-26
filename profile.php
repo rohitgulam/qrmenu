@@ -1,8 +1,6 @@
 <?php
     include 'header.php'
 ?>
-
-    <?php if(isset($_SESSION["useruid"])) : ?>
         <div class="qr-group">
             <h2><?php echo $userDetails['rest_name'] ?></h2>
             <a href=<?php echo 'main.php?rest_id='.$_SESSION["userid"] ?> ><img src='<?php echo generateQR( 'main.php?rest_id='.$_SESSION["userid"]) ?>' alt='QR Code' width='200' height='200'></a>
@@ -31,11 +29,6 @@
                 <button type="submit" name="cpassword" id="change-pwd" class="btn">Change Password</button>
             </form>
         </div>
-    <?php else : ?>  
-        <?php header("location: login.php");
-            exit(); ?>
-    <?php endif ;?>
-
 <?php
     include 'footer.php'
 ?>

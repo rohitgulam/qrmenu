@@ -2,7 +2,6 @@
     include "header.php"
 
 ?>
-    <?php if(isset($_SESSION["useruid"])) : ?>
             <?php if(isset($_GET['update'])) : ?>
             <div class="add-food-container">
                 <a href="index.php" id="add-food-not" ><i class="fas fa-arrow-left"></i></a>
@@ -66,11 +65,6 @@
                 </form>
             </div> 
             <?php endif ; ?>   
-    <?php else : ?>  
-        <?php header("location: login.php");
-            exit; ?>
-    <?php endif ;?>
-
 <?php 
     include "footer.php"
 ?>
