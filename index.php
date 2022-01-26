@@ -48,7 +48,7 @@
             </div>
             <div class="qr-group">
                 <h4>Click or scan to preview your menu</h4>
-                <a href=<?php echo 'public/main.php?rest_id='.$_SESSION["userid"] ?> ><img src='<?php echo generateQR( 'public/main.php?rest_id='.$_SESSION["userid"]) ?>' alt='QR Code' width='200' height='200'></a>
+                <a href=<?php echo 'http://qrmenu.rohitgulam.com/qrmenu/public/main.php?rest_id='.$_SESSION["userid"] ?> ><img src='<?php echo generateQR( 'http://qrmenu.rohitgulam.com/qrmenu/public/main.php?rest_id='.$_SESSION["userid"]) ?>' alt='QR Code' width='200' height='200'></a>
             </div>
 <?php 
     include "footer.php"
