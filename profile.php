@@ -2,8 +2,7 @@
     include 'header.php'
 ?>
         <div class="qr-group">
-            <h2><?php echo $userDetails['rest_name'] ?></h2>
-            <a href=<?php echo 'main.php?rest_id='.$_SESSION["userid"] ?> ><img src='<?php echo generateQR( 'main.php?rest_id='.$_SESSION["userid"]) ?>' alt='QR Code' width='200' height='200'></a>
+        <a href=<?php echo 'http://qrmenu.rohitgulam.com/public/main.php?rest_id='.$_SESSION["userid"] ?> ><img src='<?php echo generateQR( 'http://qrmenu.rohitgulam.com/public/main.php?rest_id='.$_SESSION["userid"]) ?>' alt='QR Code' width='200' height='200'></a>
             <p>To print your QR codes, <br> screenshot this page and crop the above code then show it to the stationery for printing</p>
         </div>
 
