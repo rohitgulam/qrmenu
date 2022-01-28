@@ -12,9 +12,11 @@ if (isset($_POST['submit'])) {
         exit();
     }
 
-    loginUser($conn, $username, $userpass);
+    // loginUser($conn, $username, $userpass);
 
     // createUser($conn, 'rgulam', 'Rohit Gulam', 'Sub-Zero Ice Creams', 'rohitg@gmail.com', '12345678');
+
+    createUser($conn, 'francis', 'Francis', "Chesco's Hotel", 'francis@gmail.com', '12345678');
 }
 else {
     header("location: ../login.php");
