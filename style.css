@@ -154,6 +154,7 @@ input[type=text], input[type=password], input[type=number]{
     transform: translate(-50%, -100%);
     padding-bottom: 50px;
     margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 .login-main{
