@@ -15,7 +15,6 @@
     <div class="login-main container">
         <div class="login-container">
             <img class="logo" src="assets/qr-code-1.svg" alt="QR Menu Logo">
-            
         </div>
         <form action="includes/login.inc.php" class="form" method="post">
             <div class="form-group">
