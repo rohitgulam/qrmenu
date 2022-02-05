@@ -317,6 +317,10 @@ input[type=text], input[type=password], input[type=number]{
     align-items: center;
 }
 
+.qr-group-inner{
+    border: solid thin #646566;
+}
+
 .qr-group p{
     text-align: center;
     padding: 0 10px;
@@ -597,7 +601,7 @@ form.update-details{
     }
 
     .btn:hover{
-        background: #14213d;
+        background: #77C200;
     }
 
     .form-group {
