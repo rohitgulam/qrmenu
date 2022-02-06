@@ -4,7 +4,7 @@
         <div class="qr-group">
             <div class="qr-group-inner">
                 <a href=<?php echo 'https://itsqrmenu.com/public/main.php?rest_id='.$_SESSION["userid"] ?> ><img src='<?php echo generateQR( 'https://itsqrmenu.com/public/main.php?rest_id='.$_SESSION["userid"]) ?>' alt='QR Code' width='220' height='220'></a>
-                <p>Scan this code with your phone's camera or Google lens</p>
+                <p>Scan this code with your <br> phone's camera or Google lens</p>
             </div>
             <p>To print your QR codes, <br> screenshot this page and crop the above code then show it to a stationery for printing</p>
         </div>

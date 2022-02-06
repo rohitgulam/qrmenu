@@ -327,7 +327,7 @@ input[type=text], input[type=password], input[type=number]{
 }
 
 .qr-group-inner p{
-    font-size: 12px;
+    text-align: center;
 }
 
 .qr-group p{
