@@ -323,6 +323,11 @@ input[type=text], input[type=password], input[type=number]{
     justify-content: center;
     align-items: center;
     border: solid thin #646566;
+    background-color: #fff;
+}
+
+.qr-group-inner p{
+    font-size: 12px;
 }
 
 .qr-group p{
