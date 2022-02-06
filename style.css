@@ -318,6 +318,10 @@ input[type=text], input[type=password], input[type=number]{
 }
 
 .qr-group-inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border: solid thin #646566;
 }
 
