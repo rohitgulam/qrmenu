@@ -100,7 +100,7 @@ button:hover{
 input, textarea{
     padding: 2px 4px;
     height: 40px;
-    border: 1px solid rgb(112, 112, 112);
+    border: 1px solid rgb(102, 75, 75);
     border-radius: 4px;
     font-size: 20px;
 }
@@ -430,7 +430,7 @@ form.update-details{
     }
 
     .btn:hover{
-        background: #14213d;
+        background: #77C200;
     }
 
     .form-group {
@@ -572,7 +572,7 @@ form.update-details{
     }
 
     .btn:hover{
-        background: #14213d;
+        background: #77C200;
     }
 
     .form-group {
