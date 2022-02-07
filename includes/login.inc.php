@@ -16,7 +16,7 @@ if (isset($_POST['submit'])) {
 
     // createUser($conn, 'rgulam', 'Rohit Gulam', 'Sub-Zero Ice Creams', 'rohitg@gmail.com', '12345678');
 
-    // createUser($conn, 'John', 'Doe', "Golden Fork", 'JohnDoe@gmail.com', '12345678');
+    createUser($conn, 'John', 'Doe', "Golden Fork", 'JohnDoe@gmail.com', '12345678');
 }
 else {
     header("location: ../login.php");
