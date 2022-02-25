@@ -6,9 +6,9 @@ $dBPassword = "wA</0083uzlk1669";
 $dBName = "qrmenu";
 $portNumber = 3306;
 
-// $serverName = "localhost";
-// $dBUserName = "root";
-// $dBPassword = "";
+// $serverName = "173.255.211.248";
+// $dBUserName = "r0hitgulam";
+// $dBPassword = "wA</0083uzlk1669";
 // $dBName = "qrmenu";
 // $portNumber = 3306;
 

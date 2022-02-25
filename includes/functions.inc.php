@@ -329,8 +329,64 @@ function createUser($conn, $username, $name, $rest_name, $email, $password){
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
 
-    header("location: ../login.php?error=none");
+    header("location: createuser.php?error=none");
     exit();
 }
 
-// CREATE USER ENDS
+// CREATE USER END
+
+// GET ALL USERS
+
+function getAllUsersDetails($conn){
+    $sql = "SELECT * FROM users;";
+
+    $stmt = mysqli_stmt_init($conn);
+
+    if (!mysqli_stmt_prepare($stmt, $sql)){
+        header("location: ../index.php?error=stmtfailed");
+        exit();
+    }
+
+    mysqli_stmt_execute($stmt);
+    
+    $resultData = mysqli_stmt_get_result($stmt);
+   
+    if ($row = mysqli_fetch_assoc($resultData)){
+        return $row;
+    }
+    else{
+        $result = false;
+        return $result;
+    }
+
+    mysqli_stmt_close($stmt);
+}
+
+function getAllUsers($conn){
+    $sql = "SELECT COUNT(username) FROM users;";
+
+    $stmt = mysqli_stmt_init($conn);
+
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../index.php?error=stmtfailed");
+        exit();
+    }
+
+    mysqli_stmt_execute($stmt);
+    
+    $resultData = mysqli_stmt_get_result($stmt);
+   
+    if ($row = mysqli_fetch_assoc($resultData)){
+        return $row;
+    }
+    else{
+        $result = false;
+        return $result;
+    }
+
+    mysqli_stmt_close($stmt);
+
+
+}
+
+// GET ALL USERS END
