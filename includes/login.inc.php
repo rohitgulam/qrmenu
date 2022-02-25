@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
         exit();
     }
 
-    // loginUser($conn, $username, $userpass);
+    loginUser($conn, $username, $userpass);
 
     // createUser($conn, 'rgulam', 'Rohit Gulam', 'Sub-Zero Ice Creams', 'rohitg@gmail.com', '12345678');
     
@@ -21,7 +21,7 @@ if (isset($_POST['submit'])) {
 
     // createUser($conn, 'userone', 'Change Name', 'Change Restaurant Name', 'change@gmail.com', '12345678');
     // createUser($conn, 'usertwo', 'Change Name', 'Change Restaurant Name', 'change@gmail.com', '12345678');
-    createUser($conn, 'userthree', 'Change Name', 'Change Restaurant Name', 'change@gmail.com', '12345678');
+    // createUser($conn, 'userthree', 'Change Name', 'Change Restaurant Name', 'change@gmail.com', '12345678');
 
 }
 else {
