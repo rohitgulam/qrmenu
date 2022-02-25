@@ -19,8 +19,8 @@ if (isset($_POST['submit'])) {
     // createUser($conn, 'zein', 'Zein Aklan', 'Zein Ice Creams', 'zein@gmail.com', '12345678');
 
 
-    createUser($conn, 'userone', 'Change Name', 'Change Restaurant Name', 'change@gmail.com', '12345678');
-    // createUser($conn, 'usertwo', 'Change Name', 'Change Restaurant Name', 'change@gmail.com', '12345678');
+    // createUser($conn, 'userone', 'Change Name', 'Change Restaurant Name', 'change@gmail.com', '12345678');
+    createUser($conn, 'usertwo', 'Change Name', 'Change Restaurant Name', 'change@gmail.com', '12345678');
     // createUser($conn, 'userthree', 'Change Name', 'Change Restaurant Name', 'change@gmail.com', '12345678');
 
 }
