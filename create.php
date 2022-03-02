@@ -21,6 +21,14 @@
                         <input type="number" id="food-price" name="food_price" value="<?php echo fetchFoodItem($conn, $_GET['userid'],$_GET['foodid'])['food_price'] ?>">
                     </div>
                     <div class="input-group">
+                        <label for="food-category">Food Category</label>
+                        <select name="food_category" id="food-category">
+                        <?php foreach($categories as $category){ ?>
+                            <option value="<?php  echo $category['food_category'] ?>"><?php  echo $category['food_category'] ?></option>
+                            <?php }?>
+                        </select>
+                    </div>
+                    <div class="input-group">
                         <label for="food-desc">Food Description</label>
                         <textarea id="food-desc" name="food_desc" cols="30"><?php echo fetchFoodItem($conn, $_GET['userid'],$_GET['foodid'])['food_desc'] ?></textarea>
                     </div>

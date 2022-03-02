@@ -217,7 +217,7 @@ function fetchFoodItem($conn, $user_id,  $food_id){
 }
 
 
-function updateFoodItem($pdo, $user_id, $food_id, $food_name, $food_price, $food_desc){
+function updateFoodItem($pdo, $user_id, $food_id, $food_name, $food_price, $food_desc, $food_category){
     // $sql = 'UPDATE foods SET food_name=?, food_price=?, food_desc=? WHERE id=? AND user_id=?';
 
     
@@ -233,11 +233,12 @@ function updateFoodItem($pdo, $user_id, $food_id, $food_name, $food_price, $food
     // mysqli_stmt_execute($stmt);
     // mysqli_stmt_close($stmt);
 
-    $statement = $pdo->prepare("UPDATE foods SET food_name =:food_name, food_price = :food_price, food_desc = :food_desc WHERE user_id = :user_id AND id = :id ;");
+    $statement = $pdo->prepare("UPDATE foods SET food_name =:food_name, food_price = :food_price, food_desc = :food_desc, food_category =:food_category WHERE user_id = :user_id AND id = :id ;");
 
     $statement->bindValue(':food_name', $food_name);
     $statement->bindValue(':food_price', $food_price);
     $statement->bindValue(':food_desc', $food_desc);
+    $statement->bindValue(':food_category', $food_category);
     $statement->bindValue(':user_id', $user_id);
     $statement->bindValue(':id', $food_id);
     $statement->execute();

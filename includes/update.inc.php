@@ -13,6 +13,7 @@ if (isset($_SESSION['useruid'])) {
         $food_name = $_GET['food_name']; 
         $food_price = $_GET['food_price']; 
         $food_desc = $_GET['food_desc']; 
+        $food_category = $_GET['food_category']; 
         // $food_img = $_GET['food_img']; 
 
         if (emptyInputCreate($food_name, $food_price) !== false) {
@@ -20,7 +21,7 @@ if (isset($_SESSION['useruid'])) {
             exit();
         }
 
-        updateFoodItem($pdo, $userid, $food_id, $food_name, $food_price, $food_desc);
+        updateFoodItem($pdo, $userid, $food_id, $food_name, $food_price, $food_desc, $food_category);
 
     }
 }
