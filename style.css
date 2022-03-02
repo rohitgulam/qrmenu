@@ -272,6 +272,10 @@ input[type=text], input[type=password], input[type=number]{
     padding: 0 10px;
 }
 
+.menu-edit .category-heading{
+    font-size: 16px;
+}
+
 
 .menu-edit .name-price{
     display: flex;
