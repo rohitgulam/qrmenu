@@ -8,6 +8,11 @@
     font-family: 'IBM Plex Mono', monospace;
 }
 
+:root{
+    --primary-color: #8ac926;
+    --primary-color-hover: #77C200; 
+}
+
 body{
     background-color: #F2F5FF;
     padding-bottom: 10vh;
@@ -195,6 +200,8 @@ input[type=text], input[type=password], input[type=number]{
     margin: 10px 0;
 }
 
+
+
 /* Main Dashboard Page */
 
 .dashboard-container{
@@ -210,6 +217,8 @@ input[type=text], input[type=password], input[type=number]{
 
 
 /* MENU PREVIEW */
+
+
 
 
 .banner-area{
@@ -235,6 +244,13 @@ input[type=text], input[type=password], input[type=number]{
     background-color: #f9f9f9;
     width: 100%;
     margin: 10px auto;
+}
+
+.menu-preview .category-heading{
+    font-size: 24px;
+    text-align: center;
+    text-decoration: underline;
+    color: #111;
 }
 
 .menu-food-title, .menu-food-price{
