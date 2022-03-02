@@ -23,8 +23,8 @@
                                 </div>
                             </div>
                             <p class="edit menu-food-desc"><?php echo $food['food_desc'] ?></p>
-            </div>
-                <?php }?>
+                </div>
+            <?php }?>
             </div>
 
             <div class="menu-preview">
