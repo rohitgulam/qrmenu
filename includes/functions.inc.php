@@ -42,6 +42,16 @@ function fetchItems($pdo, $user_id){
 
     return $foods;
 }
+
+function getAllCategories($pdo, $user_id){
+    $statement = $pdo->prepare('SELECT DISTINCT food_category FROM foods WHERE user_id = :user_id');
+    $statement->bindValue('user_id', $user_id);
+    $statement->execute();
+    $categories = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+    return $categories;
+
+}
 // LOGIN PAGE
 
 function emptyInputLogin($username, $userpass){
@@ -126,8 +136,8 @@ function emptyInputCreate($food_name, $food_price){
     return $result;
 }
 
-function addFoodItem($conn, $userid, $food_name, $food_price, $food_desc){
-    $sql = "INSERT INTO foods (user_id, food_name, food_price, food_desc) VALUES (?, ?, ?, ?);";
+function addFoodItem($conn, $userid, $food_name, $food_price, $food_desc, $food_category){
+    $sql = "INSERT INTO foods (user_id, food_name, food_price, food_desc, food_category) VALUES (?, ?, ?, ?, ?);";
 
     $stmt = mysqli_stmt_init($conn);
 
@@ -136,7 +146,7 @@ function addFoodItem($conn, $userid, $food_name, $food_price, $food_desc){
         exit();
     }
 
-    mysqli_stmt_bind_param($stmt, 'isis', $userid, $food_name, $food_price, $food_desc);
+    mysqli_stmt_bind_param($stmt, 'isiss', $userid, $food_name, $food_price, $food_desc, $food_category);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
 
