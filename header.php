@@ -7,6 +7,7 @@
     require_once "includes/dbh.inc.php";
     require_once "includes/functions.inc.php";
     $foods = fetchItems($pdo, $_SESSION['userid']);
+    $categories = getAllCategories($pdo, $_SESSION['userid']);
     $userDetails = fetchAccountDetails($conn, $_SESSION['userid']);
 ?>
 
