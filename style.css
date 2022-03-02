@@ -97,12 +97,16 @@ button:hover{
     cursor: pointer;
 }
 
-input, textarea{
+input, textarea,select{
     padding: 2px 4px;
     height: 40px;
     border: 1px solid rgb(102, 75, 75);
     border-radius: 4px;
     font-size: 20px;
+}
+
+select{
+    background: #fff;
 }
 
 /* Removing arrows on type number input */
