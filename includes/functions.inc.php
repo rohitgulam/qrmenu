@@ -43,6 +43,17 @@ function fetchItems($pdo, $user_id){
     return $foods;
 }
 
+function fetchItemsViaCategories($pdo, $user_id, $category){
+    $statement = $pdo->prepare('SELECT * FROM foods WHERE user_id = :user_id AND food_category = :category');
+    $statement->bindValue(':user_id', $user_id);
+    $statement->bindValue(':category', $category);
+    $statement->execute();
+    $foods =$statement->fetchAll(PDO::FETCH_ASSOC);
+
+    return $foods;
+}
+
+
 function getAllCategories($pdo, $user_id){
     $statement = $pdo->prepare('SELECT DISTINCT food_category FROM foods WHERE user_id = :user_id');
     $statement->bindValue('user_id', $user_id);
