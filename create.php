@@ -1,6 +1,5 @@
 <?php 
-    include "header.php"
-
+    include "header.php";
 ?>
             <?php if(isset($_GET['update'])) : ?>
             <div class="add-food-container">
@@ -51,6 +50,14 @@
                     <div class="input-group">
                         <label for="food-price">Food Price</label>
                         <input type="number" id="food-price" name="food_price">
+                    </div>
+                    <div class="input-group">
+                        <label for="food-category">Food Category</label>
+                        <select name="food_category" id="food-category">
+                        <?php foreach($categories as $category){ ?>
+                            <option value="<?php  echo $category['food_category'] ?>"><?php  echo $category['food_category'] ?></option>
+                            <?php }?>
+                        </select>
                     </div>
                     <div class="input-group">
                         <label for="food-desc">Food Description</label>
