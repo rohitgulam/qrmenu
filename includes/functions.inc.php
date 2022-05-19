@@ -335,8 +335,8 @@ function changePassword($conn, $userId, $newPass){
 
 // CREATE USER
 
-function createUser($conn, $username, $name, $rest_name, $email, $password){
-    $sql = "INSERT INTO users (username, name, rest_name, email, password) VALUES (?, ?, ?, ?, ?) ;";
+function createUser($conn, $username, $name, $rest_name, $email, $phone_number, $password, $source){
+    $sql = "INSERT INTO users (username, name, rest_name, email, phone_number, password, source) VALUES (?, ?, ?, ?, ?, ?, ?) ;";
  
     $stmt = mysqli_stmt_init($conn);
 
@@ -347,14 +347,13 @@ function createUser($conn, $username, $name, $rest_name, $email, $password){
 
     $hashedPwd = password_hash($password, PASSWORD_DEFAULT);
 
-    mysqli_stmt_bind_param($stmt, "sssss", $username, $name, $rest_name, $email, $hashedPwd);
+    mysqli_stmt_bind_param($stmt, "ssssiss", $username, $name, $rest_name, $email, $phone_number, $$hashedPwd, $source);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
 
-    header("location: createuser.php?error=none");
+    header("location: ../login.php?error=none");
     exit();
 }
-
 // CREATE USER END
 
 // GET ALL USERS
