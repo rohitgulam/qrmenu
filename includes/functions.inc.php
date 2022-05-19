@@ -347,7 +347,7 @@ function createUser($conn, $username, $name, $rest_name, $email, $phone_number, 
 
     $hashedPwd = password_hash($password, PASSWORD_DEFAULT);
 
-    mysqli_stmt_bind_param($stmt, "ssssiss", $username, $name, $rest_name, $email, $phone_number, $$hashedPwd, $source);
+    mysqli_stmt_bind_param($stmt, "ssssiss", $username, $name, $rest_name, $email, $phone_number, $hashedPwd, $source);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
 
