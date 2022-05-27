@@ -412,3 +412,64 @@ function getAllUsers($conn){
 }
 
 // GET ALL USERS END
+
+// CHECK IF INVITE CODE EXISTS
+function checkInviteCode($conn, $inviteCode){
+    $sql = "SELECT * from codes WHERE name = ?;";
+
+    $stmt = mysqli_stmt_init($conn);
+
+    if (!mysqli_stmt_prepare($stmt, $sql)){
+        header("location: ../index.php?error=stmtfailed");
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "s",  $inviteCode);
+    mysqli_stmt_execute($stmt);
+
+
+    $resultData = mysqli_stmt_get_result($stmt);
+
+    if ($row = mysqli_fetch_assoc($resultData)) {
+        return $row;
+    }
+    else{
+        $result = false;
+        return $result;
+    }
+
+    mysqli_stmt_close($stmt);
+}
+
+// CHECK IF INVITE CODE EXISTS END
+
+
+// UPGRADE USER (Make user active using invite code)
+
+function upgradeUser($conn, $inviteCode, $userId){
+    $code = checkInviteCode($conn, $inviteCode);
+    $user = fetchAccountDetails($conn, $userId);
+
+    if($inviteCode === $code['name']){
+        $sql = "UPDATE users SET active = 1 WHERE id = ?;";
+
+        $stmt = mysqli_stmt_init($conn);
+
+        if(!mysqli_stmt_prepare($stmt, $sql)){
+            header("location: ../index.php?error=Failed");
+            exit();
+        }
+
+        mysqli_stmt_bind_param($stmt, 'i', $userId);
+        mysqli_stmt_execute($stmt);
+
+        $_SESSION['usertype'] = $user['active'];
+
+        header("location: ../login.php?upgrade=succesful");
+        exit();
+    }else{
+        header("location: ../index.php?error=notinvitecode");
+        exit();
+    }
+}
+// UPGRADE USER END
