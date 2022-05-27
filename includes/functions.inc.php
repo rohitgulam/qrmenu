@@ -125,6 +125,7 @@ function loginUser($conn, $username, $userpass){
         session_start();
         $_SESSION['userid'] = $usernameExists['id'];
         $_SESSION['useruid'] = $usernameExists['username'];
+        $_SESSION['usertype'] = $usernameExists['active'];
         header("location: ../index.php");
         exit();
     }
