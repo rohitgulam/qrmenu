@@ -8,12 +8,12 @@
                         <h2>You can skip the waitlist and get access right away if you have an invite code</h2>
                     </div>
                     <div class="code-area">
-                        <form class="login-form" action="upgradeuser.inc.php" method="POST">
+                        <form class="login-form" action="includes/upgradeuser.inc.php" method="POST">
                             <div class="form-group">
                                 <label for="invite-code">Invite Code</label>
                                 <input type="text" id="invite-code" name="invite-code">
                             </div>
-                            <button class="btn" type="submit">Submit Code</button>
+                            <button class="btn" type="submit" name="submit" >Submit Code</button>
                         </form>
                         <p>You can get an invite code from other users who already use itsqrmenu, itsqrmenu ambassadors, or from <a href="https://twitter.com/RohitGulam">Rohit Gulam</a>.</p>
                     </div>
