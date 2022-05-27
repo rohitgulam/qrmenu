@@ -16,6 +16,7 @@
 body{
     background-color: #F2F5FF;
     padding-bottom: 10vh;
+    height: 100vh;
 }
 
 .page-container{
@@ -60,6 +61,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 20px;
 }
 
 
@@ -158,7 +160,7 @@ input[type=text], input[type=password], input[type=number]{
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
 
 .fields{
@@ -195,6 +197,29 @@ input[type=text], input[type=password], input[type=number]{
     display: block;
     margin: 10px 0;
 }
+
+/* WAITLIST PAGE */
+
+.waitlist-container{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 60%;
+}
+
+.waitlist-container h1{
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.waitlist-container h2{
+    font-size: 1.15rem;
+}
+
+/* WAITLIST PAGE END */
 
 /* Main Dashboard Page */
 
@@ -553,6 +578,18 @@ form.update-details{
     .cpassword-container .input-group{
         margin-top: 30px;
     }
+
+    /* WAITLIST PAGE */
+
+    .waitlist-container .code-area{
+        width: 500px;
+    }
+
+    .waitlist-container .code-area p{
+        margin-top: 20px;
+    }
+    
+    /* WAITLIST PAGE END */
 
 
 
