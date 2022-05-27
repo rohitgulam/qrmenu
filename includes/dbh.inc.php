@@ -1,10 +1,10 @@
 <?php
 
 $serverName = "localhost";
-$dBUserName = "rohit";
-$dBPassword = "wA</0083uzlk1669";
+$dBUserName = "root";
+$dBPassword = "";
 $dBName = "qrmenu";
-$portNumber = 3306;
+// $portNumber = 3306;
 
 // $serverName = "173.255.211.248";
 // $dBUserName = "r0hitgulam";
