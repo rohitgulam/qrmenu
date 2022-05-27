@@ -1,7 +1,25 @@
 <?php
     include "header.php";
 ?>
-        <div class="dashboard-container">
+            <?php if ($_SESSION['usertype'] === 0) : ?>
+                <div class="waitlist-container">
+                    <div class="text">
+                        <h1>Congrats! You're number 43 on the waitlist!</h1>
+                        <h2>You can skip the waitlist and get access right away if you have an invite code</h2>
+                    </div>
+                    <div class="code-area">
+                        <form class="login-form" action="upgradeuser.inc.php" method="POST">
+                            <div class="form-group">
+                                <label for="invite-code">Invite Code</label>
+                                <input type="text" id="invite-code" name="invite-code">
+                            </div>
+                            <button class="btn" type="submit">Submit Code</button>
+                        </form>
+                        <p>You can get an invite code from other users who already use itsqrmenu, itsqrmenu ambassadors, or from <a href="https://twitter.com/RohitGulam">Rohit Gulam</a>.</p>
+                    </div>
+                </div>
+            <?php else : ?>
+            <div class="dashboard-container">
                 <a href="create.php" class="btn btn-block" id="add-food" >Add Food</a>
             </div>
 
@@ -62,8 +80,9 @@
             </div>
             <div class="qr-group">
                 <h4>Click or scan to preview your menu</h4>
-                <a href=<?php echo 'https://itsqrmenu.com/public/main.php?rest_id='.$_SESSION["userid"] ?> ><img src='<?php echo generateQR( 'https://itsqrmenu.com/public/main.php?rest_id='.$_SESSION["userid"]) ?>' alt='QR Code' width='200' height='200'></a>
+                <a href=<?php echo 'main.php?rest_id='.$_SESSION["userid"] ?> ><img src='<?php echo generateQR( 'main.php?rest_id='.$_SESSION["userid"]) ?>' alt='QR Code' width='200' height='200'></a>
             </div>
+            <?php endif; ?>
 <?php 
     include "footer.php"
 ?>
