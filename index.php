@@ -15,6 +15,15 @@
                             </div>
                             <button class="btn" type="submit" name="submit" >Submit Code</button>
                         </form>
+                        <?php 
+                            if (isset($_GET['error'])) {
+                                if ($_GET['error'] === 'notinvitecode'){
+                                    echo "<div>
+                                    <p class='alert error' >Invalid code! You can get a code from other itsqrmenu users or itsqrmenu ambassadors</p>
+                                </div>";
+                                }
+                            }
+                        ?>
                         <p>You can get an invite code from other users who already use itsqrmenu, itsqrmenu ambassadors, or from <a href="https://twitter.com/RohitGulam">Rohit Gulam</a>.</p>
                     </div>
                 </div>
