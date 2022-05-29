@@ -465,7 +465,7 @@ function upgradeUser($conn, $inviteCode, $userId){
 
         $_SESSION['usertype'] = $user['active'];
 
-        header("location: ../login.php?upgrade=succesful");
+        header("location: ../login.php?error=upgradesuccesful");
         exit();
     }else{
         header("location: ../index.php?error=notinvitecode");
