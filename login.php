@@ -37,6 +37,9 @@
                             if ($_GET['error'] === 'wrongpass'){
                                 echo "<p class='form-validation' >Incorrect username or password. Please try again</p>";
                             }
+                            if ($_GET['error'] === 'upgradesuccesful'){
+                                echo "<p class='form-validation success' >Invite code succesful. Log in to start creating your QR menu</p>";
+                            }
                         }
                     ?>
                     <button type="submit" name="submit" id="login" class="btn btn-block" >Log In</button>
