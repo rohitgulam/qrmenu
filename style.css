@@ -140,7 +140,7 @@ input[type=text], input[type=password], input[type=number]{
 }
 
 .alert{
-    color: #fff;
+    color: rgb(0, 0, 0);
     font-size: 1.2rem;
     text-align: center;
     padding: 20px 20px;
@@ -150,8 +150,20 @@ input[type=text], input[type=password], input[type=number]{
 }
 
 .alert.error{
-    background-color: #ff758f;
+    background-color: #fc8ea2;
     border-color: #c9184a;
+}
+
+.form-validation{
+    margin-top: 10px;
+}
+
+.form-validation.error{
+    color: #c9184a;
+}
+
+.form-validation.success{
+    color: #436b03;
 }
 
 /* Login Page */
@@ -186,11 +198,6 @@ input[type=text], input[type=password], input[type=number]{
 .form-group label{
     font-size: 1.2rem;
     padding: 6px 0;
-}
-
-.form-validation{
-    margin-top: 10px;
-    color: #c9184a;
 }
 
 .lostpassword{
