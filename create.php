@@ -21,12 +21,13 @@
                         <input type="number" id="food-price" name="food_price" value="<?php echo fetchFoodItem($conn, $_GET['userid'],$_GET['foodid'])['food_price'] ?>">
                     </div>
                     <div class="input-group">
-                        <label for="food-category">Food Category</label>
-                        <select name="food_category" id="food-category">
+                        <label for="food-category">Category</label>
+                        <input list="food-categories" name="food_category" id="food-category" type="text" autocomplete="off" >
+                        <datalist id="food-categories">
                         <?php foreach($categories as $category){ ?>
                             <option value="<?php  echo $category['food_category'] ?>"><?php  echo $category['food_category'] ?></option>
                             <?php }?>
-                        </select>
+                        </datalist>
                     </div>
                     <div class="input-group">
                         <label for="food-desc">Food Description</label>
@@ -60,12 +61,13 @@
                         <input type="number" id="food-price" name="food_price">
                     </div>
                     <div class="input-group">
-                        <label for="food-category">Food Category</label>
-                        <select name="food_category" id="food-category">
+                        <label for="food-category">Category</label>
+                        <input list="food-categories" name="food_category" id="food-category" type="text" autocomplete="off">
+                        <datalist id="food-categories">
                         <?php foreach($categories as $category){ ?>
                             <option value="<?php  echo $category['food_category'] ?>"><?php  echo $category['food_category'] ?></option>
                             <?php }?>
-                        </select>
+                        </datalist>
                     </div>
                     <div class="input-group">
                         <label for="food-desc">Food Description</label>
