@@ -473,3 +473,20 @@ function upgradeUser($conn, $inviteCode, $userId){
     }
 }
 // UPGRADE USER END
+
+// GET USER WAITLIST POSITION 
+function getWaitlistPosition($conn, $userId){
+    $sql = 'SELECT * FROM user where active = 0 and id = ?;';
+
+    $stmt = mysqli_stmt_init($conn);
+
+    if (!mysqli_stmt_prepare($stmt, $sql)){
+        header('Location: ../index.php?error=stmtfailure');
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, 'i', $userId);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+}
+// GET USER WAITLIST POSITION END 
