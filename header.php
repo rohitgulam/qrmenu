@@ -9,6 +9,7 @@
     fetchItems($pdo, $_SESSION['userid']);
     $categories = getAllCategories($pdo, $_SESSION['userid']);
     $userDetails = fetchAccountDetails($conn, $_SESSION['userid']);
+    $position = getWaitlistPosition($conn, $_SESSION['userid']);
 ?>
 
 <!DOCTYPE html>
