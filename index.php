@@ -4,7 +4,7 @@
             <?php if ($_SESSION['usertype'] === 0) : ?>
                 <div class="waitlist-container">
                     <div class="text">
-                        <h1>Congrats! You're number 43 on the waitlist!</h1>
+                        <h1>Congrats! You're number <?php echo $position['COUNT(id)'] ?> on the waitlist!</h1>
                         <h2>You can skip the waitlist and get access right away if you have an invite code</h2>
                     </div>
                     <div class="code-area">
