@@ -476,7 +476,7 @@ function upgradeUser($conn, $inviteCode, $userId){
 
 // GET USER WAITLIST POSITION 
 function getWaitlistPosition($conn, $userId){
-    $sql = 'SELECT * FROM user where active = 0 and id = ?;';
+    $sql = 'SELECT COUNT(id) FROM users WHERE id BETWEEN 1 AND ? AND active = 0;';
 
     $stmt = mysqli_stmt_init($conn);
 
@@ -487,6 +487,17 @@ function getWaitlistPosition($conn, $userId){
 
     mysqli_stmt_bind_param($stmt, 'i', $userId);
     mysqli_stmt_execute($stmt);
+    
+    $resultData = mysqli_stmt_get_result($stmt);
+
+    if ($row = mysqli_fetch_assoc($resultData)) {
+        return $row;
+    }
+    else{
+        $result = false;
+        return $result;
+    }
+
     mysqli_stmt_close($stmt);
 }
 // GET USER WAITLIST POSITION END 
