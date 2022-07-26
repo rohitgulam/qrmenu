@@ -41,11 +41,14 @@ nav img{
 
 nav ul{
     list-style: none;
+    display: flex;
+    flex-direction: row;
 }
 
 nav ul li{
     text-transform: uppercase;
     font-weight: 800;
+    padding-right: .8rem;
 }
 
 nav ul li a {
