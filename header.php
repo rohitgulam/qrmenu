@@ -37,5 +37,6 @@
         </a>
         <ul>
             <li><a href="profile.php">profile</a></li>
+            <li><a href="includes/logout.inc.php">log out</a></li>
         </ul>
     </nav>
